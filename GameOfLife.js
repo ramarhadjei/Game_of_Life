@@ -19,29 +19,32 @@ class GameOfLife {
     //  [0, 0, 0],
     //  [0, 0, 0],
     // ]
-    function makeBoard(cols, rows){
-      let arr = new Array(cols);
-      for(let i = 0; i < arr.length; i++){
-        arr[i] = new Array(rows);
-        //for (let j = 0; i <)
-      }
-      return arr
-    }
-    let grid;
-    let cols = 10;
-    let rows = 10;
+  
 
-    function setup() {
-      grid = makeBoard(cols, rows);
-      for (let i = 0; i < cols; i++){
-        for (let j = 0; j < rows; j++){
-          grid[i][j] = floor(random(2));
+    var board = [];
+    for (var i=0; i < this.height; i++){
+    var row = [];
+ 
+for (var j = 0; j < this.width; j++){
+  var col = 0;
+  row.push(col);
+}
+  board.push(row)
+}
+  
+  //  var board =[];
+  return board;
+}
 
-          //This will give a nested loop
+indexFor(row, col){
+  //return undefined if we're out of bounds
+  if (row < 0 || row >= this.height || col < 0 || col >= this.width){
+  return;
+}
 
-        }
-      }
-    }
+return row * this.width + col;
+}
+
 
   /**
    * Return the amount of living neighbors around a given coordinate.
@@ -49,6 +52,12 @@ class GameOfLife {
 
   livingNeighbors(row, col) {
     // TODO: Return the count of living neighbors.
+    for(let i =0; i< col; i++){
+      for(let j = 0; j < row; j++){
+
+      }
+    
+    }
   }
 
   /**
@@ -68,4 +77,20 @@ class GameOfLife {
     // based on their current alive neighbors
     this.board = newBoard;
   }
+  getCell (row,col){
+
+    // create cellExist function and then do if this.cellExist() { code rest in here}
+
+      if (value = 1){
+        return value =  1;
+      } else if (value = 0) {
+        return value = 0;
+      }
+      
+      return value; 
+    
+  }
+
+  setCell (value, row, col){
+}
 }
